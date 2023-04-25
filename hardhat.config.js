@@ -11,7 +11,7 @@ module.exports = {
   // settings for network connection
   networks: {
     hardhat: {
-      chainId: 1337
+      chainId: 31337
     }
   }
 };

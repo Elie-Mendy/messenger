@@ -2,10 +2,13 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import Messenger from './artifacts/contracts/Messenger.sol/Messenger.json';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const contractAddress = '0x5fbdb2315678afecb367f032d93f642f64180aa3';
 
 function App() {
+  //! Rainbow Kit
+
 
   const [message, setMessage] = useState();
 
@@ -64,6 +67,7 @@ function App() {
       <p>{message}</p>
       <input onChange={e => setMessage(e.target.value)} placeholder='Enter a message'/>
       <button onClick={messageSetter}>Set greeting</button>
+      <ConnectButton />
     </div>
   );
 }
